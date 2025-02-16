@@ -7,7 +7,7 @@
     <title>Responsive Base Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .active{
+        .active {
             background-color: red;
         }
     </style>
@@ -15,122 +15,121 @@
 
 <body>
     <header
-        class="fixed flex-wrap md:flex-nowrap lg:flex-nowrap justify-between md:justify-normal lg:justify-normal bg-black/90 text-white p-4 flex w-full"
+        class="fixed flex-wrap md:flex-nowrap lg:flex-nowrap justify-between md:justify-normal lg:justify-normal bg-black/90 text-white p-4 flex w-full px-12"
         id="main-header">
         <div>
-            <img src="./img/main_logo.png" alt="" class="w-48">
+            <img src="./img/main_logo.png" alt="" class="sm:w-48 w-32">
         </div>
         <div class="md:hidden">
             <button id="menu-btn" class="text-white text-2xl font-bold">☰</button>
         </div>
 
-        <div id="menu" class="
-                hidden lg:flex md:flex 
-                items-center gap-6 w-full justify-center text-lg font-bold cursor-pointer mt-6 md:mt-0 lg:mt-0">
-            <p class="text-center">Home</p>
-            <p class="text-center" onclick="scrollToDiv()">Service</p>
-            <p class="text-center">Contact</p>
-            <p class="text-center">Tech Stack</p>
-            <p class="text-center">Our products</p>
+        <div id="menu" class="hidden lg:flex md:flex items-center gap-6 w-full justify-center text-lg font-bold cursor-pointer mt-6 md:mt-0 lg:mt-0">
+            <p class="text-center" onclick="setActiveMenuItem(this); scrollToTop()">Home</p>
+            <p class="text-center" onclick="setActiveMenuItem(this); scrollToDiv()">Service</p>
+            <p class="text-center" onclick="setActiveMenuItem(this); scrollToDivContactUS()">Contact</p>
+            <p class="text-center" onclick="setActiveMenuItem(this); scrollToDivTechStack()">Tech Stack</p>
+            <p class="text-center" onclick="setActiveMenuItem(this); scrollToDivAboutUs()">About Us</p>
         </div>
+        
     </header>
     <div class="pt-24 sm:pt-32 text-3xl font-bold text-center py-2">
-        <p class="text-4xl">Innovate. Build. Transform</p>
-        <p class="font-semibold py-2">with</p>
-        <p>Syncrones.</p>
+        <p class="text-4xl text-green-600">Innovate. Build. Transform</p>
+        <p class="font-semibold py-2 text-green-600">with</p>
+        <p class="text-green-600">Syncrones.</p>
     </div>
     <div>
-        <img src="./img/theme-img.svg" alt="" class="w-full">
+        <img src="./img/theme-img.svg" alt="" class="w-full" id="services_relative">
     </div>
     <main class="p-6" id="services">
         <h1 class="text-2xl font-bold px-12 py-5 text-center">Our Services</h1>
         <div class="flex flex-wrap gap-6 justify-center">
-            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-black-400 ml-6
+            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-green-400
                 w-full h-[250px] gap-3
                 md:w-[300px] md:h-[250px] md:gap-3
                 sm:w-[250px] sm:h-[350px] sm:gap-3
                 lg:w-[400px] lg:h-[300px] lg:gap-4
                 ">
                 <img src="./img/support-img-1.svg" alt="" class="w-12 lg:w-16 md:w-12">
-                <h1 class="md:text-lg text-xl font-bold">
+                <h1 class="md:text-lg text-xl font-bold text-green-600">
                     AI Solutions
                 </h1>
-                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md">
+                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md sm:text-base text-sm">
                     Empower your business with AI. From machine learning algorithms to data-driven analytics, our AI
                     solutions ensure smarter decision-making and automation.
                 </p>
             </div>
-            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-black-400 ml-6
+            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-green-400
                 w-full h-[250px] gap-3
                 md:w-[300px] md:h-[250px] md:gap-3
                 sm:w-[250px] sm:h-[350px] sm:gap-3
                 lg:w-[400px] lg:h-[300px] lg:gap-4
                 ">
                 <img src="./img/support-img-1.svg" alt="" class="w-12 lg:w-16 md:w-12">
-                <h1 class="md:text-lg text-xl font-bold">
+                <h1 class="md:text-lg text-xl font-bold text-green-600">
                     AI Solutions
                 </h1>
-                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md">
+                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md sm:text-base text-sm">
                     Empower your business with AI. From machine learning algorithms to data-driven analytics, our AI
                     solutions ensure smarter decision-making and automation.
                 </p>
             </div>
-            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-black-400 ml-6
+            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-green-400
                 w-full h-[250px] gap-3
                 md:w-[300px] md:h-[250px] md:gap-3
                 sm:w-[250px] sm:h-[350px] sm:gap-3
                 lg:w-[400px] lg:h-[300px] lg:gap-4
                 ">
                 <img src="./img/support-img-1.svg" alt="" class="w-12 lg:w-16 md:w-12">
-                <h1 class="md:text-lg text-xl font-bold">
+                <h1 class="md:text-lg text-xl font-bold text-green-600">
                     AI Solutions
                 </h1>
-                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md">
+                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md sm:text-base text-sm">
                     Empower your business with AI. From machine learning algorithms to data-driven analytics, our AI
                     solutions ensure smarter decision-making and automation.
                 </p>
             </div>
-            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-black-400 ml-6
+            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-green-400
                 w-full h-[250px] gap-3
                 md:w-[300px] md:h-[250px] md:gap-3
                 sm:w-[250px] sm:h-[350px] sm:gap-3
                 lg:w-[400px] lg:h-[300px] lg:gap-4
                 ">
                 <img src="./img/support-img-1.svg" alt="" class="w-12 lg:w-16 md:w-12">
-                <h1 class="md:text-lg text-xl font-bold">
+                <h1 class="md:text-lg text-xl font-bold text-green-600">
                     AI Solutions
                 </h1>
-                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md">
+                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md sm:text-base text-sm">
                     Empower your business with AI. From machine learning algorithms to data-driven analytics, our AI
                     solutions ensure smarter decision-making and automation.
                 </p>
             </div>
-            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-black-400 ml-6
+            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-green-400
                 w-full h-[250px] gap-3
                 md:w-[300px] md:h-[250px] md:gap-3
                 sm:w-[250px] sm:h-[350px] sm:gap-3
                 lg:w-[400px] lg:h-[300px] lg:gap-4
                 ">
                 <img src="./img/support-img-1.svg" alt="" class="w-12 lg:w-16 md:w-12">
-                <h1 class="md:text-lg text-xl font-bold">
+                <h1 class="md:text-lg text-xl font-bold text-green-600">
                     AI Solutions
                 </h1>
-                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md">
+                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md sm:text-base text-sm">
                     Empower your business with AI. From machine learning algorithms to data-driven analytics, our AI
                     solutions ensure smarter decision-making and automation.
                 </p>
             </div>
-            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-black-400 ml-6
+            <div class="shadow-lg rounded-lg flex justify-center flex-col items-center border border-green-400
                 w-full h-[250px] gap-3
                 md:w-[300px] md:h-[250px] md:gap-3
                 sm:w-[250px] sm:h-[350px] sm:gap-3
                 lg:w-[400px] lg:h-[300px] lg:gap-4
                 ">
                 <img src="./img/support-img-1.svg" alt="" class="w-12 lg:w-16 md:w-12">
-                <h1 class="md:text-lg text-xl font-bold">
+                <h1 class="md:text-lg text-xl font-bold text-green-600">
                     AI Solutions
                 </h1>
-                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md">
+                <p class="font-medium text-center px-6 text-black/75 md:text-sm lg:text-md sm:text-base text-sm">
                     Empower your business with AI. From machine learning algorithms to data-driven analytics, our AI
                     solutions ensure smarter decision-making and automation.
                 </p>
@@ -138,7 +137,7 @@
 
         </div>
     </main>
-    <div class="lg:flex bg-black text-white lg:px-36 sm:px-24 px-16">
+    <div class=" bg-black text-white lg:px-36 sm:px-24 px-16" id="aboutUs">
         <div>
             <h1 class="lg:text-3xl text-2xl font-bold py-6">
                 Insights About Our
@@ -171,34 +170,35 @@
             </p>
 
         </div>
-        <img src="./img/about-img.svg" alt="" class="p-12 lg:w-2/5 md:p-6 lg:p-12">
+        <img src="./img/about-us.jpg" alt="" class="pb-8 sm:p-12 md:p-6 lg:p-12 w-full">
     </div>
-    <div class="px-8 lg:px-36 md:px-24 sm:px-12">
+    <div class="px-8 lg:px-36 md:px-24 sm:px-12 pb-6" id="teckStack">
         <h1 class="text-2xl py-4 font-bold">Tech Stack</h1>
-        <div class="md:flex-nowrap flex-wrap flex p-4 border border-green-400 rounded-lg gap-x-11 justify-between h-32 " id="corousal-container">
+        <div class="flex-wrap flex p-4 border border-green-400 rounded-lg gap-x-11 justify-between h-32 sm:items-start items-center "
+            id="corousal-container">
             <div class="flex-1">
-                <p class="font-medium text-center sm:text-xs lg:text-base md:text-sm">Flutter</p>
-                <img src="./img/flutter.png" alt="" class="w-12 mx-auto">
+                <p class="font-medium text-center text-xs sm:text-xs lg:text-base md:text-sm">Flutter</p>
+                <img src="./img/flutter.png" alt="" class="w-[35px] mx-auto sm:w-12">
             </div>
             <div class="flex-1">
-                <p class="font-medium text-center sm:text-xs lg:text-base md:text-sm">React</p>
-                <img src="./img/react.png" alt="" class="w-12 mx-auto">
+                <p class="font-medium text-center text-xs sm:text-xs lg:text-base md:text-sm">React</p>
+                <img src="./img/react.png" alt="" class="w-[35px] mx-auto sm:w-12">
             </div>
             <div class="flex-1">
-                <p class="font-medium text-center sm:text-xs lg:text-base md:text-sm">Node</p>
-                <img src="./img/node.png" alt="" class="w-12 mx-auto">
+                <p class="font-medium text-center text-xs sm:text-xs lg:text-base md:text-sm">Node</p>
+                <img src="./img/node.png" alt="" class="w-[35px] mx-auto sm:w-12">
             </div>
             <div class="flex-1">
-                <p class="font-medium text-center sm:text-xs lg:text-base md:text-sm">Angular</p>
-                <img src="./img/angular.png" alt="" class="w-12 mx-auto">
+                <p class="font-medium text-center text-xs sm:text-xs lg:text-base md:text-sm">Angular</p>
+                <img src="./img/angular.png" alt="" class="w-[35px] mx-auto sm:w-12">
             </div>
             <div class="flex-1">
-                <p class="font-medium text-center sm:text-xs lg:text-base md:text-sm">Spring</p>
-                <img src="./img/spring.png" alt="" class="w-12 mx-auto p-1">
+                <p class="font-medium text-center text-xs sm:text-xs lg:text-base md:text-sm">Spring</p>
+                <img src="./img/spring.png" alt="" class="w-[35px] mx-auto sm:w-12 p-1">
             </div>
             <div class="flex-1">
-                <p class="font-medium text-center sm:text-xs lg:text-base md:text-sm">MongoDB</p>
-                <img src="./img/mongodb.png" alt="" class="w-12 mx-auto">
+                <p class="font-medium text-center text-xs sm:text-xs lg:text-base md:text-sm">MongoDB</p>
+                <img src="./img/mongodb.png" alt="" class="w-[35px] mx-auto sm:w-12">
             </div>
         </div>
         <div class="flex justify-center space-x-2 mt-3" id="corousal">
@@ -207,31 +207,121 @@
             <div class="w-2 h-2 bg-green-400 rounded-full cursor-pointer" id="c3" onclick="corousal(this, event)"></div>
         </div>
     </div>
-    <footer class="bg-blue-500 text-white text-center p-4 mt-6">
-        <p class="text-sm md:text-base">&copy; 2025 Your Company</p>
+    <div class="sm:flex justify-start gap-12 bg-black text-white mb-12 px-6" id="contactUS">
+        <div class="p-6 flex flex-col justify-between">
+            <img src="./img/main_logo.png" alt="" class="w-36">
+            <p class="pt-2 max-w-80">Join the Syncrones Community Stay updated with the latest in AI and technology.</p>
+            <p>Follow Us On </p>
+            <div class="flex gap-4 py-2">
+                <img src="./img/lindin.svg" alt="">
+                <img src="./img/instagram.svg" alt="">
+                <img src="./img/facebook.svg" alt="">
+            </div>
+        </div>
+        <div class="py-6 px-12 hidden lg:block">
+            <h1 class="text-2xl font-bold pb-4">Services</h1>
+            <div class="flex flex-col gap-1 font-normal">
+                <p>AI Solutions</p>
+                <p>Website Development</p>
+                <p>Mobile App Development</p>
+                <p>UI/UX Design</p>
+                <p>Software Testing Services</p>
+            </div>
+        </div>
+        <div class="py-6 px-6">
+            <h1 class="text-2xl font-bold pb-4">Contact Us</h1>
+            <div class="flex flex-col gap-2">
+                <div class="flex gap-2">
+                    <img src="./img/address.svg" alt="">
+                    <p>No 221/B, Bakers Street, London</p>
+                </div>
+                <div class="flex gap-2">
+                    <img src="./img/mobile.svg" alt="">
+                    <p>+94773506330</p>
+                </div>
+                <div class="flex gap-2">
+                    <img src="./img/email.svg" alt="">
+                    <p>methmaaravinda@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="fixed bottom-0 w-full text-white text-center p-4 mt-6 bg-black/90">
+        <p class="text-sm md:text-base">&copy; 2024 Syncrones. All Rights Reserved.</p>
     </footer>
     <script>
-        document.getElementById('menu-btn').addEventListener('click', function () {
+        document.getElementById('menu-btn').addEventListener('click', handleVisibility);
+        function handleVisibility () {
             let menu = document.getElementById('menu');
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
             } else {
                 menu.classList.add('hidden');
             }
-        });
-
-        function scrollToDiv() {
-            document.getElementById("services").scrollIntoView({ behavior: "smooth", block: "start" });
         }
+
+        function setActiveMenuItem(clickedElement) {
+            setTimeout(handleVisibility, 500)
+            const menuItems = document.querySelectorAll("#menu p"); // Select all menu items
+            menuItems.forEach(item => item.classList.remove("text-green-600")); // Remove active class
+        
+            clickedElement.classList.add("text-green-600"); // Add active class to clicked item
+        }
+        
+        function scrollToDiv() {
+            const element = document.getElementById("services");
+            const yOffset = -70; // Adjust this value as needed
+
+            window.scrollTo({
+                top: element.getBoundingClientRect().top + window.scrollY + yOffset,
+                behavior: "smooth"
+            });
+            // document.getElementById("services_relative").scrollIntoView({ behavior: "smooth", block: "end" });
+        }
+        function scrollToDivTechStack() {
+            const element = document.getElementById("teckStack");
+            const yOffset = -70; // Adjust this value as needed
+
+            window.scrollTo({
+                top: element.getBoundingClientRect().top + window.scrollY + yOffset,
+                behavior: "smooth"
+            });
+            // document.getElementById("services_relative").scrollIntoView({ behavior: "smooth", block: "end" });
+        }
+        function scrollToDivAboutUs() {
+            const element = document.getElementById("aboutUs");
+            const yOffset = -70; // Adjust this value as needed
+
+            window.scrollTo({
+                top: element.getBoundingClientRect().top + window.scrollY + yOffset,
+                behavior: "smooth"
+            });
+            // document.getElementById("services_relative").scrollIntoView({ behavior: "smooth", block: "end" });
+        }
+        function scrollToDivContactUS() {
+            console.log("scroll to bottom")
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth"
+            });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        
 
         function corousal(clickedElement) {
             const corousalContainer = document.getElementById('corousal-container');
             const corousalDotsContainer = document.getElementById('corousal');
-            
+
             // Remove active class from all dots
             corousalDotsContainer.querySelectorAll("div").forEach(dot => dot.classList.remove("bg-red-400"));
             clickedElement.classList.add("bg-red-400");
-        
+
             // Define carousel items
             const allItems = [
                 { title: "Flutter", img: "./img/flutter.png" },
@@ -249,57 +339,57 @@
                 { title: "Next", img: "./img/next.png" },
                 { title: "GraphQL", img: "./img/graphql.png" }
             ];
-        
+
             // ✅ Set the number of items per row manually
             let itemsPerRow = 6; // Change this value to control how many items appear in one row
-        
+
             // Adjust for responsive screens (optional)
             if (window.innerWidth < 1024) itemsPerRow = 4; // Tablets
             if (window.innerWidth < 768) itemsPerRow = 3; // Mobile
-        
+
             // Split items into pages based on `itemsPerRow`
             const pages = [];
             for (let i = 0; i < allItems.length; i += itemsPerRow) {
                 pages.push(allItems.slice(i, i + itemsPerRow));
             }
-        
+
             // Get the clicked dot index
             const selectedIndex = Array.from(corousalDotsContainer.children).indexOf(clickedElement);
-        
+
             // Clear existing content and populate new page
             corousalContainer.innerHTML = '';
             pages[selectedIndex].forEach(item => {
                 let div = document.createElement("div");
                 div.classList.add("flex-1", "text-center");
-        
+
                 div.innerHTML = `
-                    <p class="font-medium text-center lg:text-base md:text-sm">${item.title}</p>
-                    <img src="${item.img}" alt="${item.title}" class="w-12 mx-auto">
+                    <p class="font-medium text-xs text-center lg:text-base md:text-sm">${item.title}</p>
+                    <img src="${item.img}" alt="${item.title}" class="w-[35px] mx-auto sm:w-12">
                 `;
                 corousalContainer.appendChild(div);
             });
         }
-        
+
         // Function to dynamically generate dots based on `itemsPerRow`
         function generateDots() {
             const corousalDotsContainer = document.getElementById('corousal');
             const corousalContainer = document.getElementById('corousal-container');
-        
+
             // Define total items (same as `corousal` function)
             const totalItems = 14;
-        
+
             // ✅ Set the number of items per row manually
             let itemsPerRow = 6; // Default for desktop
-        
+
             // Adjust for responsive screens
             if (window.innerWidth < 1024) itemsPerRow = 4; // Tablets
             if (window.innerWidth < 768) itemsPerRow = 3; // Mobile
-        
+
             const totalPages = Math.ceil(totalItems / itemsPerRow);
-        
+
             // Clear old dots
             corousalDotsContainer.innerHTML = '';
-        
+
             // Generate new dots dynamically
             for (let i = 0; i < totalPages; i++) {
                 let dot = document.createElement("div");
@@ -308,16 +398,16 @@
                 dot.onclick = function () { corousal(dot); };
                 corousalDotsContainer.appendChild(dot);
             }
-        
+
             // Trigger initial content load
             corousal(corousalDotsContainer.children[0]);
         }
-        
+
         // Call `generateDots` when the page loads & on window resize
         window.addEventListener('load', generateDots);
         window.addEventListener('resize', generateDots);
-        
-        
+
+
     </script>
 </body>
 
